@@ -1,11 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Title & logo -->
+    <title>GitHub Issues Tracker</title>
+    <link rel="shortcut icon" href="assets/github-logo.png" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+
+    <!-- DaisyUI & Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Connect with CSS file  -->
+    <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
-    
+
+    <!-- Login form -->
+    <section class="bg-[#F8FAFC] min-h-screen flex justify-center items-center text-center">
+        <div class="bg-white w-[520px] p-8 space-y-6 shadow rounded-lg">
+            <div class="flex justify-center items-center "><img src="assets/github-logo.png" alt=""></div>
+            <div>
+                <h2 class="font-semibold text-[24px] text-[#1F2937]">GitHub Issues Tracker</h2>
+                <p class="text-[#64748B]">Sign in to manage your issues</p>
+            </div>
+            <div class="">
+          <fieldset class="fieldset lg:w-sm p-4">
+            <label class="label font-medium text-[16px] text-[#1F2937]">Username</label>
+            <input
+              id="Signin_input"
+              type="text"
+              class="input lg:w-sm leading-4 text-[#71717A]"
+              placeholder="Enter Username"
+            />
+
+            <label class="label font-medium text-[16px] text-[#1F2937] mt-4"
+              >Password</label
+            >
+            <input
+              id="Signin_password"
+              type="password"
+              class="input lg:w-sm leading-4 text-[#71717A]"
+              placeholder="Enter Password"
+            />
+
+            <button id="SIgnin_btn" class="btn btn-primary mt-6">Sign in</button>
+          </fieldset>
+        </div>
+        </div>
+    </section>
+    <script src="script/sign_in.js"></script>
 </body>
+
 </html>
