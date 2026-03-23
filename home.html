@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
-<body>
+<body class="bg-[#F8FAFC]">
     <!-- Navbar section  -->
     <header class="px-20 shadow-sm">
         <div class="navbar bg-white ">
@@ -39,13 +39,29 @@
 
                 <button class="btn btn-primary">Search</button>
                 <button class="btn btn-primary">+ New issues</button>
-                
-
-                
             </div>
         </div>
     </header>
 
+
+    <!-- issue showing Button  section  -->
+    <section class="w-11/12 bg-white shadow-sm mt-20 mx-auto p-6 ">
+        <div class=" ">
+            <button onclick="allIssues()" class="btn btn-outline btn-primary px-9 py-3 mr-2">All</button>
+            <button class="btn btn-outline btn-primary px-9 py-3 mr-2">Open</button>
+            <button class="btn btn-outline btn-primary px-9 py-3 mr-2">Closed</button>
+        </div>
+    </section>
+    <section id="issue-container" class="bg-[#F8FAFC] p-10 w-11/12 mx-auto my-10 grid grid-cols-4 gap-5 ">
+        
+        
+
+    </section>
+
+
+
+
+    <script src="script/index.js"></script>
 </body>
 
 </html>
