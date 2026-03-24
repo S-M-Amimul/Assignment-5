@@ -70,10 +70,18 @@ const displayIssues = (issues) => {
             statusHTML += `<span class="bg-[#9CA3AF30] text-[#9CA3AF] px-2 py-1 rounded-3xl text-xs">LOW</span>`
         }
 
+         let borderColor = ""
+
+        if (issue.status === "open") {
+            borderColor = "border-t-4 border-green-500"
+        } else if (issue.status === "closed") {
+            borderColor = "border-t-4 border-purple-500"
+        }
+
 
         const card = document.createElement("div")
         card.innerHTML = `
-        <div class="bg-white rounded-xl shadow-sm  py-5 px-5 space-y-4   h-[300px]">
+        <div class="bg-white rounded-xl shadow-sm  py-5 px-5 space-y-4   h-[300px] ${borderColor}">
             <div class="flex justify-between ">
                 ${statusHTML}
             </div>
@@ -95,12 +103,6 @@ const displayIssues = (issues) => {
         issueContainer.appendChild(card)
 
     })
-
-
-
-
-
-
 }
 
 
