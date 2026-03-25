@@ -1,9 +1,18 @@
-
+const manageSpinner =(status)=>{
+    if(status == true){
+        document.getElementById("spinner").classList.remove("hidden")
+        document.getElementById("issue-container").classList.add("hidden")
+    }else{
+        document.getElementById("spinner").classList.add("hidden")
+        document.getElementById("issue-container").classList.remove("hidden")
+    }
+}
 
 let allIssues = []
 
 
 const loadIssues = () => {
+    manageSpinner(true)
     fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
         .then(res => res.json())
         .then(data => {
@@ -84,16 +93,20 @@ const displayIssues = (issues) => {
         issueContainer.appendChild(card)
     })
 
+    manageSpinner(false)
+
 
     const issueCount = document.getElementById("issue-count")
     if (issueCount) {
         issueCount.textContent = `${issues.length} Issues`
     }
+
 }
 
 
 
 const loadIssueDetail = async (id) => {
+    manageSpinner(true)
     const url = `https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`;
 
     const res = await fetch(url);
@@ -171,6 +184,7 @@ const displayIssueDetails = (issue) => {
     </div>`
 
     document.getElementById("issue_modal").showModal()
+    manageSpinner(false)
 }
 
 
